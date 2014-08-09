@@ -33,7 +33,7 @@
             </div>
           </div>
           <div class="ui dropdown icon item about"><i class="icon help"></i>
-            <div class="menu"><a href="/welcome-to-hackfoldr" class="foldr item"><i class="icon exchange"></i>使用說明、問題回報</a><a href="https://github.com/hackfoldr/maker.moztw.org" target="_blank" class="link item"><i class="icon github"></i><i class="icon forward mail"></i>程式碼</a></div>
+            <div class="menu"><a href="/welcome-to-hackfoldr" class="foldr item"><i class="icon exchange"></i>使用說明、問題回報</a><a href="https://github.com/moztw/hackfoldr-moztw" target="_blank" class="link item"><i class="icon github"></i><i class="icon forward mail"></i>程式碼</a></div>
           </div><a class="right item expand button collapsed mode hidden desktop only"><i class="icon arrow right"></i></a><a class="right item collapse button expanded mode desktop only"><i class="icon arrow left"></i></a>
           <div class="right icon item zoom ui dropdown"><i class="icon zoom in"></i>
             <div class="menu">
@@ -129,7 +129,7 @@
       <script>
         // prepare to handle url
         var paths = location.pathname.split('/') || [];
-        var ethercalc_name     = paths[1] || "welcome-to-hackfoldr";
+        var ethercalc_name     = paths[1] || "moztw";
         var current_iframe_url = paths[2] ? unescape(unescape(paths[2])) : null;
         var history_state={};
         // prepare to handle backend data (from ethercalc or google spreadsheet)
@@ -758,7 +758,7 @@
           var new_hackpad_title = $("#topbar .form .new.pad.title").val();
           //var new_hackpad_id = encodeURIComponent(new_hackpad_title.slice(0,8));
           var new_hackpad_id = Math.random().toString(36);
-          var new_hackpad_url = "https://g0v.hackpad.com/"+new_hackpad_id;
+          var new_hackpad_url = "https://moztw.hackpad.com/"+new_hackpad_id;
           var new_menu_item = '<a href="'+new_hackpad_url+'" target="iframe" class="link item"><i class="icon text file outline"></i>'+new_hackpad_title+'</a>';
           // add new hackpad info to foldr
           if(new_hackpad_title.length > 0){
