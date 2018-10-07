@@ -1,0 +1,30 @@
+language: node_js
+
+node_js:
+  - '0.10'
+
+git:
+  depth: 1
+
+before_install:
+  - gem update --system
+  - gem install compass --no-document
+  - gem install tilt --version "1.4.1" --no-document
+
+before_script:
+  - chmod +x .travis/after_success.sh
+  - chmod +x ./deploy
+
+script:
+  - npm test
+
+branches:
+  except:
+    - gh-pages
+
+env:
+  global:
+    - REPO=""
+    - secure: ""
+
+after_success: .travis/after_success.sh
